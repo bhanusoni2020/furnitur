@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo">
+                <i class="fas fa-home"></i>
+                <span>Dashboard</span>
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="dashboard.html">
+                            <i class="fas fa-home"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="profile.html">
+                            <i class="fas fa-user"></i>
+                            <span>Profile</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>Orders</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-heart"></i>
+                            <span>Favorites</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="main-content">
+            <div class="topbar">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div class="user-info">
+                    <div class="notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <div class="profile">
+                        <img src="https://via.placeholder.com/40" alt="Profile">
+                        <span>John Doe</span>
+                    </div>
+                </div>
+            </div>
+            <div class="profile-container">
+                <div class="profile-header">
+                    <div class="profile-image">
+                        <img src="https://via.placeholder.com/200" alt="Profile Picture">
+                        <button class="upload-btn">Upload Photo</button>
+                    </div>
+                    <div class="profile-info">
+                        <h2>John Doe</h2>
+                        <p class="member-since">Member since: May 2023</p>
+                        <div class="profile-stats">
+                            <div class="stat">
+                                <i class="fas fa-star"></i>
+                                <span>Points: 1,250</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-shopping-bag"></i>
+                                <span>Orders: 12</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-heart"></i>
+                                <span>Favorites: 5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-tabs">
+                    <button class="tab-btn active" data-tab="personal">Personal Info</button>
+                    <button class="tab-btn" data-tab="address">Address</button>
+                    <button class="tab-btn" data-tab="security">Security</button>
+                    <button class="tab-btn" data-tab="preferences">Preferences</button>
+                </div>
+
+                <div class="tab-content active" id="personal">
+                    <h3>Personal Information</h3>
+                    <form class="profile-form">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" value="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" value="john.doe@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" value="+1 234 567 890">
+                        </div>
+                        <div class="form-group">
+                            <label for="gender">Gender</label>
+                            <select id="gender">
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                                <option value="prefer-not-to-say">Prefer not to say</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="dob">Date of Birth</label>
+                            <input type="date" id="dob" value="1990-01-01">
+                        </div>
+                        <div class="form-group">
+                            <label for="occupation">Occupation</label>
+                            <input type="text" id="occupation" value="Software Developer">
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company</label>
+                            <input type="text" id="company" value="Tech Solutions Inc">
+                        </div>
+                        <div class="form-group">
+                            <label for="about">About Me</label>
+                            <textarea id="about" rows="4">Passionate about technology and design. Love creating beautiful and functional digital experiences.</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="social">Social Links</label>
+                            <div class="social-links">
+                                <div class="link-field">
+                                    <input type="url" placeholder="LinkedIn URL">
+                                </div>
+                                <div class="link-field">
+                                    <input type="url" placeholder="Twitter URL">
+                                </div>
+                                <div class="link-field">
+                                    <input type="url" placeholder="Instagram URL">
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="save-btn">Save Changes</button>
+                    </form>
+                </div>
+
+                <div class="tab-content" id="address">
+                    <h3>Address Information</h3>
+                    <form class="profile-form">
+                        <div class="form-group">
+                            <label for="address1">Address Line 1</label>
+                            <input type="text" id="address1" value="123 Main Street">
+                        </div>
+                        <div class="form-group">
+                            <label for="address2">Address Line 2</label>
+                            <input type="text" id="address2" value="Apt 4B">
+                        </div>
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <input type="text" id="city" value="New York">
+                        </div>
+                        <div class="form-group">
+                            <label for="state">State</label>
+                            <input type="text" id="state" value="NY">
+                        </div>
+                        <div class="form-group">
+                            <label for="country">Country</label>
+                            <select id="country">
+                                <option value="us">United States</option>
+                                <option value="uk">United Kingdom</option>
+                                <option value="ca">Canada</option>
+                                <option value="au">Australia</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="zip">ZIP Code</label>
+                            <input type="text" id="zip" value="10001">
+                        </div>
+                        <div class="form-group">
+                            <label for="shipping">Shipping Address</label>
+                            <select id="shipping">
+                                <option value="same">Same as billing address</option>
+                                <option value="different">Different address</option>
+                            </select>
+                        </div>
+                        <div class="form-group shipping-address" style="display: none;">
+                            <label for="shipping-address">Shipping Address</label>
+                            <textarea id="shipping-address" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="save-btn">Save Changes</button>
+                    </form>
+                </div>
+
+                <div class="tab-content" id="security">
+                    <h3>Security Settings</h3>
+                    <form class="profile-form">
+                        <div class="form-group">
+                            <label for="current-password">Current Password</label>
+                            <input type="password" id="current-password" placeholder="Enter current password">
+                        </div>
+                        <div class="form-group">
+                            <label for="new-password">New Password</label>
+                            <input type="password" id="new-password" placeholder="Enter new password">
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm-password">Confirm Password</label>
+                            <input type="password" id="confirm-password" placeholder="Confirm new password">
+                        </div>
+                        <button type="submit" class="save-btn">Change Password</button>
+                    </form>
+                </div>
+
+                <div class="tab-content" id="preferences">
+                    <h3>Preferences</h3>
+                    <form class="profile-form">
+                        <div class="form-group">
+                            <label for="newsletter">Newsletter</label>
+                            <div class="switch">
+                                <input type="checkbox" id="newsletter" checked>
+                                <label for="newsletter">Subscribe to newsletter</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="notifications">Notifications</label>
+                            <div class="switch">
+                                <input type="checkbox" id="notifications" checked>
+                                <label for="notifications">Receive notifications</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="language">Language</label>
+                            <select id="language">
+                                <option value="en">English</option>
+                                <option value="es">Spanish</option>
+                                <option value="fr">French</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="currency">Currency</label>
+                            <select id="currency">
+                                <option value="usd">USD ($)</option>
+                                <option value="eur">EUR (€)</option>
+                                <option value="gbp">GBP (£)</option>
+                                <option value="inr">INR (₹)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="timezone">Timezone</label>
+                            <select id="timezone">
+                                <option value="utc-5">UTC-5:00 (Eastern Time)</option>
+                                <option value="utc-6">UTC-6:00 (Central Time)</option>
+                                <option value="utc-7">UTC-7:00 (Mountain Time)</option>
+                                <option value="utc-8">UTC-8:00 (Pacific Time)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="theme">Theme</label>
+                            <select id="theme">
+                                <option value="light">Light</option>
+                                <option value="dark">Dark</option>
+                                <option value="system">System</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="save-btn">Save Preferences</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="profile.js"></script>
+</body>
+</html>

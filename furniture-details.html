@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniture Details</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="furniture-details-container">
+            <div class="details-header">
+                <button onclick="window.history.back()" class="back-button">
+                    <i class="fas fa-arrow-left"></i> Back
+                </button>
+                <h1 id="itemName"></h1>
+            </div>
+            <div class="details-content">
+                <div class="large-image">
+                    <img id="itemImage" src="" alt="">
+                </div>
+                <div class="item-info">
+                    <p id="itemDescription"></p>
+                    <div class="price-section">
+                        <h3>Price:</h3>
+                        <p id="itemPrice"></p>
+                    </div>
+                    <div class="features">
+                        <h3>Features:</h3>
+                        <ul id="itemFeatures"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="furniture-details.js"></script>
+</body>
+</html>

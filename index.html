@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FurniHome - Your Perfect Furniture Partner</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Check if user is logged in -->
+    <script>
+        // If user is logged in, go directly to dashboard
+        if (localStorage.getItem('isLoggedIn')) {
+            window.location.href = 'dashboard.html';
+        } else {
+            // Otherwise show loading screen and then redirect to login
+            setTimeout(() => {
+                window.location.href = 'login.html';
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
